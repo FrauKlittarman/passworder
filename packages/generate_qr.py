@@ -38,6 +38,7 @@ def generate_pass(pass_length: int = PASS_LENGTH, pass_count: int = PASS_COUNT) 
       -C (печатать сгенерированные пароли в столбцах)
       -1 (не печатать сгенерированные пароли в столбцах)
       -v или --no-vowels (не используйте гласные, чтобы избежать случайных неприятных слов)
+      -r исключить символы из генерации
      """
     _pwgen_path: str = which_path_is_app_installed("pwgen")
 
@@ -49,6 +50,8 @@ def generate_pass(pass_length: int = PASS_LENGTH, pass_count: int = PASS_COUNT) 
                 "-n",
                 "-y",
                 "-B",
+                "-r",
+                '?|\/.{}@`:',
                 str(pass_length),
                 str(pass_count),
             ],
