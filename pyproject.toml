@@ -1,0 +1,20 @@
+[project]
+name = "passworder"
+version = "2025.12.21"
+year = "2025"
+author = "KapVA"
+description = "Создание QR-кода содержащего список с вариантами паролей на экране входа RedOS"
+dependenciesa = ["qrencode", "pwgen", "ImageMagick.convert"]
+
+requires-python = ">=3.7.3"
+dependencies = [
+    "black>=23.3.0",
+    "pydantic==1.7.4",
+    "ruff>=0.13.0",
+    "toml==0.10.0",
+]
+
+[config]
+instruction_link = "http://link-to-manual.ru"
+target_path = "/usr/share/sddm/themes/RedOS/images/background.png"
+debug_is = true
