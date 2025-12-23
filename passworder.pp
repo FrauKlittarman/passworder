@@ -3,11 +3,10 @@ class passworder (
   $passworder_enabled = true
 ) {
 
-  package { [ 'pwgen',
+  ensure_packages ( [ 'pwgen',
     'qrencode',
-    'python3-toml', ]:
-    ensure => installed,
-  }
+    'python3-toml', ]
+  )
 
   file { '/var/local/passworder/':
     ensure  => directory,
