@@ -1,5 +1,5 @@
-#popupper
-class popupper (
+#passworder
+class passworder (
   $passworder_enabled = true
 ) {
 
